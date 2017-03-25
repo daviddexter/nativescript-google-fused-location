@@ -24,9 +24,9 @@ export class LocationService extends Observable{
     constructor(){ 
         super()
         this._lastLocationData = new LocationData();
-        let isAvailble = com.google.android.gms.common.GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(application.android.context);
+        let isAvailable = com.google.android.gms.common.GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(application.android.context);
         let conRes = com.google.android.gms.common.ConnectionResult.SUCCESS;        
-        if(isAvailble === conRes){
+        if(isAvailable === conRes){
             this.locationLocator();
         }                       
     }
